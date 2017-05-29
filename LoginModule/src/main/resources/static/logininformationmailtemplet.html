@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login Details</title>
+</head>
+
+<body
+	style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;">
+	<div style="margin: 10px auto; width: 80%;">
+		<div
+			style="float: left; width: 100%; border: solid #4184f3 2px; padding: 15px; box-sizing: border-box;">
+			<div style="margin: 0 0 15px; float: left; width: 100%;">
+				<div style="margin: 0; padding: 0; float: left; width: 100%;">
+					<h1
+						style="margin: 0; padding: 15px 15px; font-size: 18px; color: #fff; text-align: center; font-weight: 400; background: rgb(65, 132, 243); background: -moz-linear-gradient(left, rgba(255, 4, 34, 1) 0%, rgba(134, 24, 162, 1) 100%); /* background: -webkit-linear-gradient(left,  rgba(255,4,34,1) 0%,rgba(134,24,162,1) 100%); */ /* background: linear-gradient(to right,  rgba(255,4,34,1) 0%,rgba(134,24,162,1) 100%); */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0422', endColorstr='#8618a2', GradientType=1);">New
+						sign-in from {browser} on {os}</h1>
+				</div>
+			</div>
+			<p style="font-size: 18px;">Hi <span style="text-transform: capitalize;">{username}</span>,</p>
+			<p style="font-size: 18px;">Your Login account {username} was
+				just used to sign in from {browser} on {os}. Please find details given below:</p>
+			<div
+				style="margin: 10px 0; padding: 0; float: left; width: 100%; background: #eee; box-sizing: border-box; border: solid #ddd 5px;">
+				<table border="1" style="width: 100%; border: solid #4184f3 3px;">
+					<tbody>
+						<tr>
+							<td>OPERATING SYSTEM</td>
+							<td style="text-transform: uppercase;">{os}</td>
+						</tr>
+						<tr>
+							<td>DATE</td>
+							<td>{date}</td>
+						</tr>
+						<tr>
+							<td>LOCATION</td>
+							<td style="text-transform: uppercase;">{city}, {regionName}, {countryName}</td>
+						</tr>
+						<tr>
+							<td>ZIPCODE</td>
+							<td>{postalCode}</td>
+						</tr>
+						<tr>
+							<td>IP ADDRESS</td>
+							<td >{ip}</td>
+						</tr>
+						<tr>
+							<td>LATITUDE</td>
+							<td >{latitude}</td>
+						</tr>
+						<tr>
+							<td>LONGITUDE</td>
+							<td>{longitude}</td>
+						</tr>
+						<tr>
+							<td>BROWSER</td>
+							<td style="text-transform: uppercase;">{browser}</td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+			<div id="googleMap" style="width:100%;height:400px;"></div>
+			<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng({latitude},{longitude}),
+    zoom:15,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+			<p
+				style="margin: 0 0 10px; padding: 0; font-size: 18px; color: #000; font-weight: 400;">Thanks
+				and Regards</p>
+			<p
+				style="margin: 0; padding: 0; font-size: 18px; color: #000; font-weight: 400;">Team
+				Login Module</p>
+
+		</div>
+	</div>
+</body>
+</html>
